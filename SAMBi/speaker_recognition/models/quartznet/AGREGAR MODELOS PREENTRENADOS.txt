@@ -1,0 +1,2 @@
+stt_es_quartznet15x5_ft_ep53_944h.nemo
+QuartzNet_FT15x5_Spanish.yaml

@@ -1,0 +1,31 @@
+#contentbox-title {
+    margin: 10px auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #e4eaf5;
+}
+
+#contentbox {
+    justify-content: center;
+    height: 500px;
+    display: flex;
+    background-color: #e4eaf5;
+}
+
+#contents{
+    justify-content: center;
+}
+
+.camera-video{
+    width: 100;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#video{
+    margin: 10px 0px;
+}

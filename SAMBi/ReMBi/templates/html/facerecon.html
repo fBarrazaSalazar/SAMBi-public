@@ -1,0 +1,61 @@
+{% include "html/header.html"%}
+{% include "html/navbar.html"%}
+{% load static %}
+
+
+<div class="container-fluid" id="contentbox-title">
+
+    <div class="row">
+        <div class="col">
+            <h2>Reconocimiento Facial</h2>
+        </div>
+    </div>
+    
+</div>
+
+<div class="container-fluid" id="contentbox">
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col">
+                <a href="inicio" class="btn btn-dark">
+                    <i class="bi bi-arrow-left-short"></i> Volver
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="camera-video">
+                    <video id="video" width="500" height="340"></video>
+                </div>
+            </div>
+            <div class="col">
+                <div id="message" >
+                    <p id="message-content"></p>
+                    <div id="button-box"></div>
+                    <div id="message-content2"></div>
+                    
+                </div>
+            </div>
+            <div class="col">
+                <div class="image-taken" id="image-taken">
+                    <form action="" method="post" class="image_submit_form">
+                        <!--{% csrf_token %}-->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><p><i class="bi bi-info-circle"></i> Para la identificacion, mire fijamente a la cámara
+            idealmente con la mejor iluminación posible.</p></div>
+            <div class="col"></div>
+            <div class="col" id="redirect-button"></div>
+        </div>
+
+    </div>
+    <script src="{% static 'js/countdown.js'%}"></script>
+</div>
+
+
+{% include "html/footer.html"%}

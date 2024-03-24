@@ -1,0 +1,74 @@
+{% include "html/header.html"%}
+{% include "html/navbar.html"%}
+{% load static %}
+
+
+<div class="container-fluid" id="contentbox-title">
+
+    <div class="row">
+        <div class="col">
+            <h2>Reconocimiento dactilar</h2>
+        </div>
+    </div>
+    
+</div>
+
+<div class="container-fluid" id="contentbox">
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col">
+                <a href="inicio" class="btn btn-dark">
+                    <i class="bi bi-arrow-left-short"></i> Volver
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <p class="text-center">
+                        Haga click en el siguiente botón para comenzar la captura
+                        de la huella dactilar.
+                    </p>
+                </div>
+                
+                <div class="row">
+                    <script>
+                        $(document).ready(function () {
+                            $('#botonIniciarCaptura').click(function () {
+                                // Get the CSRF token from the cookie
+                                var csrftoken = $("[name=csrfmiddlewaretoken]").val();
+                                $.ajax({
+                                    type: 'POST',
+                                    url: '{% url "fingerrecon" %}',
+                                    data: {
+                                        csrfmiddlewaretoken: csrftoken
+                                    },
+                                    success: function (data) {
+                                        $('#resultadosCaptura').html(data.result);
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                </div>
+
+                <div class="row">
+                    <div class="text-center">
+                        <button id="botonIniciarCaptura" class="btn btn-primary btn-lg btn-block">
+                            {% csrf_token %}
+                            <i class="bi bi-fingerprint"></i> Capturar huella
+                        </button>
+                    </div>
+                </div>
+
+                <div id="resultadosCaptura"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% include "html/footer.html"%}

@@ -1,0 +1,67 @@
+{% include "html/header.html"%}
+{% include "html/navbar.html"%}
+{% load static %}
+
+
+
+
+<div class="container-fluid" id="contentbox-title">
+
+    <div class="row">
+        <div class="col">
+            <h2>Reconocimiento de Voz</h2>
+        </div>
+    </div>
+    
+</div>
+
+<div class="container-fluid" id="contentbox">
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col">
+                <a href="" class="btn btn-dark">
+                    <i class="bi bi-arrow-left-short"></i> Volver
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <form>
+                <div class="display">
+                    
+                </div>
+                </form> 
+            </div>
+            <div class="col">
+                <div id="message" >
+                    <div id="frase"></div>
+                    <p id="message-content"></p>
+                    <p id="loading"></p>
+                    <div id="button-box"></div>
+                    
+                </div>
+            </div>
+            <div class="col">
+                <div class="controllers" id="audio-taken">
+                    
+                </div>
+                <div id="redirect-button"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><p><i class="bi bi-info-circle"></i> Para la identificacion, hable de la forma mas clara posible.</p></div>
+            <div class="col"></div>
+            <div class="col" id="message-content2"></div>
+            
+            
+            <form action="" id="myform"></form>
+        </div>
+
+    </div>
+    <script src="{% static 'js/microphone.js'%}"></script>
+</div>
+
+
+{% include "html/footer.html"%}
