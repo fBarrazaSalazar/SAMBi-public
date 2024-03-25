@@ -6,7 +6,7 @@ Consiste en una aplicación web que utiliza 5 modelos de reconocimiento biométr
 
 ## Modelos pre-entrenados utilizados:
 
-### ***Rostro***
+### ***Rostro:***
 
 #### YuNet
 **Propósito:** Detección de rostros <br/>
@@ -18,7 +18,7 @@ Consiste en una aplicación web que utiliza 5 modelos de reconocimiento biométr
 **Paper:** [SFace: Sigmoid-Constrained Hypersphere Loss for Robust Face Recognition](https://arxiv.org/abs/2205.12010) <br/>
 **Link modelo:** [https://github.com/opencv/opencv_zoo/tree/main/models/face_recognition_sface](https://github.com/opencv/opencv_zoo/tree/main/models/face_recognition_sface) <br/>
 
-### ***Voz***
+### ***Voz:***
 
 #### QuartNet
 **Propósito:** Transcripción de voz a texto <br/>
@@ -30,10 +30,10 @@ Consiste en una aplicación web que utiliza 5 modelos de reconocimiento biométr
 **Paper:** [TitaNet: Neural Model for speaker representation with 1D Depth-wise separable convolutions and global context](https://arxiv.org/abs/2110.04410) <br/>
 **Link modelo:** [https://huggingface.co/nvidia/speakerverification_en_titanet_large](https://huggingface.co/nvidia/speakerverification_en_titanet_large) <br/>
 
-### ***Huella dactilar***
+### ***Huella dactilar:***
 
 #### Red siamés con función de pérdida Triplet Loss
 **Propósito:** Reconocimiento mediante huella dactilar <br/>
 **Paper:** [Application of convolutional neural networks for fingerprint recognition](http://lup.lub.lu.se/student-papers/record/8949667/file/8949687.pdf) <br/>
 **Link modelo:** [https://github.com/Abuzariii/Fingerprint-Matching-with-Siamese-Networks-Tensorflow](https://github.com/Abuzariii/Fingerprint-Matching-with-Siamese-Networks-Tensorflow) <br/>
-
+**Nota:** Este modelo fue puesto a prueba utilizando el dispositivo de captura dactilar [Secugen Hamster Pro 20](https://secugen.com/products/hamster-pro-20/). Los drivers se encuentran en este [LINK](https://secugen.com/drivers/)
